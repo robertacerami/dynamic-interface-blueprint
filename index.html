@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Architect | System Configurator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-overlay"></div>
+
+    <header id="app-header">
+        <div class="brand-container">
+            <div class="logo-placeholder"></div>
+            <div>
+                <h1>MODULAR ARCHITECT</h1>
+                <span class="system-status">SYSTEM CONFIGURATION PROTOCOL v2.6</span>
+            </div>
+        </div>
+        <nav class="header-meta">
+            <label class="theme-switch">
+                <input id="themeToggle" type="checkbox">
+                <span class="slider"></span>
+                <span class="label">DARK MODE</span>
+            </label>
+        </nav>
+    </header>
+
+    <main id="app-container">
+        <aside id="controls-panel">
+            <section class="panel-section">
+                <h2>CONFIGURATION PROTOCOL</h2>
+                <div id="action-buttons">
+                    <button type="button" id="resetBtn" class="tech-btn">RESET SYSTEM</button>
+                    <button type="button" id="saveBtn" class="tech-btn primary">SAVE CONFIG</button>
+                </div>
+            </section>
+
+            <section class="panel-section" id="library-section">
+                <h3>COMPONENT LIBRARY</h3>
+                <div id="component-accordion">
+                    </div>
+            </section>
+        </aside>
+
+        <section id="viewport-section">
+            <div class="viewport-toolbar">
+                <div class="tab active">VISUAL VIEW</div>
+                <div class="tab">DATA MATRIX</div>
+                <div class="spacer"></div>
+                <button class="icon-btn" title="Take Snapshot">📸</button>
+                <button class="icon-btn" title="Export PDF">📄</button>
+            </div>
+
+            <div id="canvas-wrapper">
+                <div id="system-canvas">
+                    <div id="slot-container">
+                        <div id="slot-1" class="slot-node"></div>
+                        <div id="slot-2" class="slot-node"></div>
+                        <div id="slot-3" class="slot-node"></div>
+                        <div id="slot-4" class="slot-node"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="feedback-panel" class="status-bar">
+                <div class="metric">POWER: <span id="power-val">0W</span></div>
+                <div class="metric">WEIGHT: <span id="weight-val">0kg</span></div>
+                <div id="validation-msg">SYSTEM READY</div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
